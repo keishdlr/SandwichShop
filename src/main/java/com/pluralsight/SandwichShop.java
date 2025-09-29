@@ -27,7 +27,6 @@ public class SandwichShop {
         }
         else {
             System.out.println("Invalid option: try again");
-            // line that restarts at line 11
         }
 
         System.out.println("Make it loaded [y/n]");   // asking user if they want a loaded sandwich
