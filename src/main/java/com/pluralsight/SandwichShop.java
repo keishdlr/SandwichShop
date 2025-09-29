@@ -34,13 +34,13 @@ public class SandwichShop {
         System.out.println("loaded large $1.75;");
 
         String isloaded = POS.nextLine();
-
+        double plus = 0;
         if (isloaded.equalsIgnoreCase("y")) {
             if (sandwichSize == 1) {
-                total += 1.00;
+                plus += 1.00;
             }
             else if (sandwichSize == 2) {
-                total += 1.75;
+                plus += 1.75;
             }
         }
          POS.nextLine();
@@ -50,17 +50,17 @@ public class SandwichShop {
 
         // if-else statements to calculate the total after applying discount
         if (17 >= age & sandwichSize == 1) {
-            total = (total * 0.010) * 100;
+            total = ((total + plus) * 0.010) * 100;
             System.out.println("You get a 10% discount. Your total is " + total);
         }
         else if (65 <= age & sandwichSize == 1){
-            total = (total * 0.020) * 100;
+            total = ((total + plus) * 0.020) * 100;
                 System.out.println("You get a 20% discount. Your total is " + total);
         } else if (17 >= age && sandwichSize == 2) {
-            total = (total * 0.010) * 100;
+            total = ((total + plus) * 0.010) * 100;
             System.out.println("You get a 10% discount. Your total is " + total);
         } else if (65 <= age && sandwichSize == 2) {
-            total = (total * 0.010) * 100;
+            total = ((total + plus) * 0.010) * 100;
             System.out.println("You get a 20% discount. Your total is " + total);
         }
         else{
